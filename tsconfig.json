@@ -7,6 +7,10 @@
         "dist/are-lib-comunications/are-lib-comunications",
         "dist/are-lib-comunications"
       ],
+      "are-lib-i18n": [
+        "dist/are-lib-i18n/are-lib-i18n",
+        "dist/are-lib-i18n"
+      ],
       "are-lib-ui": [
         "dist/are-lib-ui/are-lib-ui",
         "dist/are-lib-ui"
