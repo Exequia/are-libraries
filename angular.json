@@ -33,6 +33,37 @@
           }
         }
       }
+    },
+    "are-lib-comunications": {
+      "projectType": "library",
+      "root": "projects/are-lib-comunications",
+      "sourceRoot": "projects/are-lib-comunications/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/are-lib-comunications/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/are-lib-comunications/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/are-lib-comunications/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/are-lib-comunications/src/test.ts",
+            "tsConfig": "projects/are-lib-comunications/tsconfig.spec.json",
+            "karmaConfig": "projects/are-lib-comunications/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "are-lib-ui"

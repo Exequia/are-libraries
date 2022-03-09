@@ -3,6 +3,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "are-lib-comunications": [
+        "dist/are-lib-comunications/are-lib-comunications",
+        "dist/are-lib-comunications"
+      ],
       "are-lib-ui": [
         "dist/are-lib-ui/are-lib-ui",
         "dist/are-lib-ui"
