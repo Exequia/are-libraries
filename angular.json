@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "are-lib-ui": {
+      "projectType": "library",
+      "root": "projects/are-lib-ui",
+      "sourceRoot": "projects/are-lib-ui/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/are-lib-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/are-lib-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/are-lib-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/are-lib-ui/src/test.ts",
+            "tsConfig": "projects/are-lib-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/are-lib-ui/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "are-lib-ui"
 }
